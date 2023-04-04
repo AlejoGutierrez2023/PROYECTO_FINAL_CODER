@@ -30,7 +30,7 @@ def blog_create(request):
 @login_required
 def blog_edit(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
-    if request.user != blog.author:
+    if not request.user.is_superuser and request.user != blog.author:
         return redirect('blog_list')
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES, instance=blog)
@@ -51,10 +51,10 @@ def blog_delete(request, pk):
 
 
 
-def blog_detail(request, pk):
-    blog = get_object_or_404(Blog, pk=pk)
-    html = render_to_string('blog_detail.html', {'blog': blog})
-    return HttpResponse(html)
+# def blog_detail(request, pk):
+#     blog = get_object_or_404(Blog, pk=pk)
+#     html = render_to_string('blog_detail.html', {'blog': blog})
+#     return HttpResponse(html)
 
 
 

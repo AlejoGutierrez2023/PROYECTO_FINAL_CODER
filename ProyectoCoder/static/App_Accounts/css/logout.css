@@ -1,0 +1,28 @@
+/* Aplica un estilo general al contenido de logout */
+#logout-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+  /* Estiliza el título de la página */
+#logout-content h2 {
+    margin-bottom: 20px;
+}
+
+  /* Estiliza el mensaje de confirmación */
+#logout-content p {
+    margin-bottom: 30px;
+}
+
+  /* Estiliza el botón de volver al inicio */
+#logout-content a {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #9f0bde;
+    color: rgb(209, 29, 29);
+    text-decoration: none;
+}

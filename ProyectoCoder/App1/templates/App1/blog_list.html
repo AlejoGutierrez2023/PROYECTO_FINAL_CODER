@@ -1,10 +1,23 @@
 
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'App1/css/blog_list.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'App1/js/blog_list.js' %}" defer></script>
+{% endblock %}
 
 {% block content %}
+
+<div id="blog-detail"><div class="mt-3"></div>
+    <a href="{% url 'base' %}" class="btn btn-danger">Volver al Inicio</a></div>
+    <a href="{% url 'blog_create' %}" class="btn btn-danger">Crear Blog</a></div>
     <h1>Blogs</h1>
 
     {% for blog in blogs %}
-        <h2><a href="#" class="blog-detail-link" data-pk="{{ blog.pk }}">{{ blog.title }}</a></h2>
+        <h2><a  class="blog-detail-link" data-pk="{{ blog.pk }}">{{ blog.title }}</a></h2>
         <p>{{ blog.subtitle }}</p>
         <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
         <p>{{ blog.body }}</p>

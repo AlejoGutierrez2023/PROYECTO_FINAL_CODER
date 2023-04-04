@@ -1,11 +1,12 @@
 
 
 {% block content %}
-    <h1>Create</h1>
+    <h1>Crear/Editar Blog</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>
+        <a href="{% url 'blog_list' %}" class="btn btn-primary">Cancel</a>
         <a href="{% url 'base' %}" class="btn btn-danger">Volver al Inicio</a></div>
     </form>
 {% endblock %}

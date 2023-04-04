@@ -18,3 +18,12 @@ class BlogAdmin(admin.ModelAdmin):
             return True
         return False
 
+
+    def has_change_permission(self, request, obj=None):
+        # Permitir que los usuarios con permisos de superusuario puedan editar cualquier blog
+        if request.user.is_superuser:
+            return True
+        # Permitir que los usuarios puedan editar solo sus propios blogs
+        if obj is not None and (obj.author == request.user or request.user.has_perm('App1.can_edit_any_blog')):
+            return True
+        return False

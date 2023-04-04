@@ -1,0 +1,32 @@
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+}
+
+form button[type="submit"] {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+form button[type="submit"]:hover {
+    background-color: #aaa;
+}
+
+form a.btn-danger {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}

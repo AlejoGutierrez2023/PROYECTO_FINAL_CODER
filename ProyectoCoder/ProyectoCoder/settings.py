@@ -131,11 +131,19 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
+    
 
-    os.path.join(BASE_DIR, 'ProyectoCoder', 'templates'),
-    os.path.join(BASE_DIR, 'App_Accounts', 'static'),
-    os.path.join(BASE_DIR, 'App_Accounts', 'static', 'App_Accounts', 'css'),
+    # os.path.join(BASE_DIR, 'ProyectoCoder', 'templates'),
+    os.path.join( 'App_Accounts/static'),
+    # os.path.join( 'App_Accounts', 'static', 'App_Accounts', 'css'),
+    os.path.join( 'App1/static/App1'),
+
 ]
+STATICFILES_FINDERS = [    'django.contrib.staticfiles.finders.FileSystemFinder', 
+                        'django.contrib.staticfiles.finders.AppDirectoriesFinder',]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 
 # Default primary key field type

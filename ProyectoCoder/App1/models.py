@@ -24,4 +24,5 @@ class Blog(models.Model):
     class Meta:
         permissions = [
             ("can_delete_any_blog", "Can delete any blog"),
+            ("can_edit_any_blog", "Can edit any blog"),
         ]

@@ -1,0 +1,31 @@
+/* Estiliza el contenido de la página */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Estiliza los botones de eliminar y cancelar */
+.content button[type="submit"], .content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Estiliza el botón de eliminar */
+.content button[type="submit"] {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+/* Estiliza el botón de cancelar */
+.content a {
+    background-color: #9f0bde;
+    color: white;
+    border: none;
+}
