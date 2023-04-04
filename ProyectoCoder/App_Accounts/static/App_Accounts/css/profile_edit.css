@@ -1,0 +1,47 @@
+ /* Aplica un estilo general al contenido del perfil */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Estiliza la imagen de perfil */
+.profile-content img {
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estiliza la tabla que muestra los datos del perfil */
+.profile-content table {
+    border-collapse: collapse;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estiliza las celdas de la tabla */
+.profile-content td, .profile-content th {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Estiliza los botones de editar y eliminar perfil */
+.profile-content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #9f0bde;
+    color: white;
+    text-decoration: none;
+}
+
+/* Estiliza el botón de cancelar en el formulario de confirmación de eliminación */
+.profile-content form a {
+    margin-top: 0;
+    margin-left: 20px;
+    background-color: #f44336;
+}

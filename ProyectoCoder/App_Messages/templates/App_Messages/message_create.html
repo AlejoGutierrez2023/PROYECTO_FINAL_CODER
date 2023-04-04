@@ -1,0 +1,19 @@
+
+
+{% block content %}
+{% load static %}
+<h1>Enviar mensaje</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <a href="{% url 'messages_list' %}" class="btn btn-danger">Volver a lista de mensajes</a>
+    <button type="submit">Enviar</button>
+    
+</form>
+
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'App_Messages/css/message_create.css' %}">
+{% endblock %}

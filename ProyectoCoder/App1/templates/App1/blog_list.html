@@ -1,0 +1,23 @@
+
+
+{% block content %}
+    <h1>Blogs</h1>
+
+    {% for blog in blogs %}
+        <h2><a href="#" class="blog-detail-link" data-pk="{{ blog.pk }}">{{ blog.title }}</a></h2>
+        <p>{{ blog.subtitle }}</p>
+        <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+        <p>{{ blog.body }}</p>
+        <p>Author: {{ blog.author.username }}</p>
+        <p>Date: {{ blog.created_at }}</p>
+        {% if user == blog.author or user.is_superuser %}
+            <a href="{% url 'blog_edit' pk=blog.pk %}">Edit</a>
+            <a href="{% url 'blog_delete' pk=blog.pk %}">Delete</a>
+        {% endif %}
+    {% endfor %}
+
+    <div id="blog-detail"><div class="mt-3"></div>
+    <a href="{% url 'base' %}" class="btn btn-danger">Volver al Inicio</a></div>
+    <a href="{% url 'blog_create' %}" class="btn btn-danger">Crear Blog</a></div>
+{% endblock %}
+

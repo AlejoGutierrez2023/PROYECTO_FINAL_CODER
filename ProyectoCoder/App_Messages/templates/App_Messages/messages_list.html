@@ -1,0 +1,61 @@
+
+{% block content %}
+{% load static %}
+<h1>MENSAJES</h1>
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>
+        {% if message.sender == user and message.receiver == user %}
+        <strong>Enviado a: {{ message.receiver }}</strong> - {{ message.timestamp }}
+        {% elif message.sender == user %}
+        <strong>De: {{ message.sender }}</strong> a {{ message.receiver }} - {{ message.timestamp }}
+        {% else %}
+        <strong>Recibido de: {{ message.sender }}</strong> - {{ message.timestamp }}
+        {% endif %}
+        <br>
+        <button id="btn-toggle-message-body-{{ message.id }}">Mostrar/Ocultar mensaje</button>
+        <div class="message-body">
+            <p class="message-body-full">{{ message.body }}</p>
+        </div>
+        
+    </li>
+    {% empty %}
+    <p>No hay mensajes para mostrar.</p>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No hay mensajes para mostrar.</p>
+{% endif %}
+
+<a href="{% url 'message_create' %}" class="btn btn-danger">Crear Mensaje</a>
+<a href="{% url 'base' %}" class="btn btn-danger">Volver al Inicio</a>
+
+
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'App_Messages/css/message_list.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'App_Messages/js/message_list.js' %}" defer></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+
+{% block content %}
+    <div class="card mt-3">
+        <div class="card-header">
+        <h5 class="card-title">Message detail</h5>
+        </div>
+        <div class="card-body">
+        <p><strong>Sender:</strong> {{ message.sender }}</p>
+        <p><strong>Receiver:</strong> {{ message.receiver }}</p>
+        <p><strong>Subject:</strong> {{ message.subject }}</p>
+        <p><strong>Message:</strong></p>
+        <p>{{ message.body }}</p>
+        </div>
+    </div>
+{% endblock %}

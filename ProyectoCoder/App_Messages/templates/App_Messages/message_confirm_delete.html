@@ -1,0 +1,13 @@
+
+
+{% block content %}
+    <div class="container">
+        <h2 class="mb-4">Confirm Delete</h2>
+        <p>Are you sure you want to delete "{{ message.subject }}"?</p>
+        <form method="post" class="d-inline">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        </form>
+        <a href="{% url 'message_detail' message.pk %}" class="btn btn-secondary ml-3">No, Cancel</a>
+    </div>
+{% endblock %}

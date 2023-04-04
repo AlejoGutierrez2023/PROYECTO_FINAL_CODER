@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    {% load static %}
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'App_Accounts/css/logout.css' %}">
+    {% endblock %}
+</head>
+<body>
+    {% csrf_token %}
+    <div class="container">
+        <h2>Logout</h2>
+        <p>Ha cerrado sesión.</p>
+        <div class="mt-3"></div>
+        <a href="{% url 'base' %}" class="btn btn-danger">Volver al Inicio</a>
+    </div>
+</body>
+</html>

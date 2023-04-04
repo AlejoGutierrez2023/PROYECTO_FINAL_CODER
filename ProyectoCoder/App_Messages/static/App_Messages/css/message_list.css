@@ -1,0 +1,49 @@
+/* Estilo para el título */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+  }
+  
+  /* Estilo para la lista de mensajes */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Estilo para cada mensaje */
+  li {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para el cuerpo del mensaje */
+  .message-body {
+    display: none;
+    margin-top: 1rem;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* Estilo para mostrar el cuerpo del mensaje */
+  .message-body.expanded {
+    display: block;
+  }
+  
+  /* Estilo para el botón de mostrar/ocultar mensaje */
+  .btn-toggle-message-body {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #bd10c0;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .btn-toggle-message-body:hover {
+    background-color: #aaa;
+  }
+  

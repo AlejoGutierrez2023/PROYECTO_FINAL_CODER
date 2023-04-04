@@ -1,0 +1,16 @@
+
+
+{% block content %}
+    <div class="card mt-3">
+        <div class="card-header">
+        <h5 class="card-title">New message</h5>
+        </div>
+        <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+        </div>
+    </div>
+{% endblock %}
