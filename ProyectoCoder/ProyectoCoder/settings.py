@@ -133,8 +133,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     
 
-    # os.path.join(BASE_DIR, 'ProyectoCoder', 'templates'),
+    os.path.join(BASE_DIR, 'ProyectoCoder/static'),
     os.path.join( 'App_Accounts/static'),
+    os.path.join( 'App_Messages/static'),
+    os.path.join( 'App_About/static'),
     # os.path.join( 'App_Accounts', 'static', 'App_Accounts', 'css'),
     os.path.join( 'App1/static/App1'),
 

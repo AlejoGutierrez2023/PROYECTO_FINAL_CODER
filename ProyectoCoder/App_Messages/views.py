@@ -41,7 +41,7 @@ def message_create(request): #Si el formulario es válido, se guarda el mensaje 
             return redirect('messages_list')
     else:
         form = MessageForm()
-    return render(request, 'message_form.html', {'form': form})
+    return render(request, 'message_create.html', {'form': form})
 
 @login_required
 def messages_list(request):
