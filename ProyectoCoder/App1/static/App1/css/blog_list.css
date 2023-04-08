@@ -1,44 +1,63 @@
-/* Estilos para los botones */
-.btn {
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #fffbff;
-    background-color: #dc0bef;
-    border-color: #dc0bef;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    display: inline-block;
-    }
-    
-    .btn:hover {
-    color: #fff;
-    background-color: #dc0bef;
-    border-color: #dc0bef;
-    }
-    
-    /* Estilos para el contenido */
-    h1 {
-    font-size: 36px;
-    font-weight: bold;
+/* Estilos para el contenedor principal de la lista de blogs */
+.blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: stretch;
+}
+
+  /* Estilos para cada contenedor de blog */
+.blog-container {
+    width: calc((100% - 50px) / 3);
     margin-bottom: 20px;
-    }
-    
-    h2 {
-    font-size: 28px;
-    margin-top: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    display: flex; /* Agregado para centrar verticalmente */
+    flex-direction: column; /* Agregado para centrar verticalmente */
+
+}
+
+  /* Estilos para el título de cada blog */
+.blog-container h2 {
+    margin-top: 0;
     margin-bottom: 10px;
-    }
-    
-    p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 24px;
+}
+
+  /* Estilos para el cuerpo de cada blog */
+.blog-container p {
+    margin-top: 0;
     margin-bottom: 10px;
-    }
-    
-    img {
-    max-width: 500px;
-    height: auto ;
-    }
+    font-size: 16px;
+}
+
+  /* Estilos para la imagen de cada blog */
+.blog-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+  /* Estilos para la sección de acciones de cada blog */
+.blog-container .blog-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+  /* Estilos para los botones de edición y eliminación de cada blog */
+.blog-container .blog-actions .btn {
+    margin-left: 10px;
+    background-color: #a917de;
+    border: 1px solid #e703f3;
+    color: #ffffff;
+}
+
+  /* Estilos para los botones de edición y eliminación de cada blog cuando se coloca el cursor sobre ellos */
+.blog-container .blog-actions .btn:hover {
+    background-color: #c10bef;
+    border-color: #ffffff;
+    color: #000000;
+}

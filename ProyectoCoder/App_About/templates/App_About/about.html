@@ -3,5 +3,17 @@
 
 {% block content %}
     <h1>Sobre mí</h1>
-    <p>Mi nombre es {{ nombre }} y soy {{ profesion }}. Me gusta {{ pasatiempo }} y siempre estoy en busca de nuevos proyectos y desafíos.</p>
+    <p>Mi nombre es Alejo Gutierrez y soy estudiante de Ciencias de la Computación en la UBA. Desde chico me ha encantado la mitología, específicamente la historia de las civilizaciones griega y romana, siendo un fanático de todas las películas, videojuegos y libros que tratan este tema. Finalmente, decidí crear mi propio blog sobre esta temática</p>
+
+        <div class="mt-3">
+            <a href="{% url 'base' %}" class="btn btn-danger">Volver al Inicio</a>
+        </div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'App_About/css/about.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'App_About/js/about.js' %}" defer></script>
 {% endblock %}

@@ -1,12 +1,21 @@
-
-
+{% load static %}
 {% block content %}
-    <h1>Crear/Editar Blog</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-        <a href="{% url 'blog_list' %}" class="btn btn-primary">Cancel</a>
-        <a href="{% url 'base' %}" class="btn btn-danger">Volver al Inicio</a></div>
-    </form>
+    <div class="container">
+        <h1 class="text-center">Crear/Editar Blog</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+            <a href="{% url 'blog_list' %}" class="btn btn-primary">Cancel</a>
+            <a href="{% url 'base' %}" class="btn btn-danger">Volver al Inicio</a>
+        </form>
+    </div>
+{% endblock %}
+
+
+
+
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'App1/css/blog_form.css' %}">
 {% endblock %}

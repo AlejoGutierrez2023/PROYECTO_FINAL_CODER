@@ -1,0 +1,25 @@
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 50px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative; 
+    
+}
+button,
+.btn {
+    border: 2px solid #a40ddf;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    position: relative; 
+    z-index: 3; 
+}
+
+button:hover,
+.btn:hover {
+    background-color: #000;
+    color: #ab0de4;
+    cursor: pointer;
+}
+

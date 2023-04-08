@@ -1,19 +1,35 @@
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-    background-color: #f8f8f8;
-    line-height: 1.5;
-    padding: 20px;
-    }
-    
+/* Estilos para el contenido del bloque */
 h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-    
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
 p {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+/* Estilos para el botón */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d70cea;
+    border-color: #fffdfd;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}

@@ -2,9 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from App1.models import Blog
 from App1.forms import BlogForm
-from django.http import HttpResponse
-from django.template.loader import render_to_string
-from django.contrib.auth.decorators import permission_required
+
 
 
 
@@ -45,16 +43,6 @@ def blog_edit(request, pk):
 def blog_delete(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
     if request.user != blog.author:
-        return redirect('blog_detail', pk=blog.pk)
+        return redirect('blog_list', pk=blog.pk)
     blog.delete()
     return redirect('blog_list')
-
-
-
-# def blog_detail(request, pk):
-#     blog = get_object_or_404(Blog, pk=pk)
-#     html = render_to_string('blog_detail.html', {'blog': blog})
-#     return HttpResponse(html)
-
-
-

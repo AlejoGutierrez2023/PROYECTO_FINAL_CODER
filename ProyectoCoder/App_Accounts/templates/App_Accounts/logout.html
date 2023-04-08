@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
+{% load static %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logout</title>
-    {% load static %}
-    {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'App_Accounts/css/logout.css' %}">
-    {% endblock %}
+    
+
 </head>
 <body>
     {% csrf_token %}
@@ -19,3 +20,7 @@
     </div>
 </body>
 </html>
+{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'App_Accounts/css/logout.css' %}">
+    {% endblock %}

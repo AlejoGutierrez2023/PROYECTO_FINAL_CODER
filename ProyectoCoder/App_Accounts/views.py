@@ -96,17 +96,3 @@ def delete_profile_view(request, pk):
         messages.success(request, 'Tu perfil ha sido eliminado correctamente')
         return redirect('signup')
     return render(request, 'App_Accounts/profile_confirm_delete.html', {'profile': profile})
-
-@login_required
-def change_password(request):
-    if request.method == 'POST':
-        form = PasswordChangeForm(user=request.user, data=request.POST)
-        if form.is_valid():
-            user = form.save()
-            update_session_auth_hash(request, user)
-            messages.success(request, 'Tu contraseña ha sido actualizada correctamente')
-            return redirect('change_password')
-    else:
-        form = PasswordChangeForm(user=request.user)
-
-    return render(request, 'App_Accounts/change_password.html', {'form': form})
