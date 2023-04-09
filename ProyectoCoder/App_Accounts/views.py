@@ -1,18 +1,14 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import  AuthenticationForm
+from django.contrib.auth import authenticate, login
 from .forms import ExtendedUserCreationForm
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from django.contrib.auth.hashers import check_password
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import UserForm, ProfileForm
+from .forms import  ProfileForm
 from .models import Profile
-from django.http import HttpResponse
 from django.contrib import messages
-from django.contrib.auth.forms import PasswordChangeForm
-from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.hashers import make_password
 from django.urls import reverse
 from urllib.parse import urlencode
