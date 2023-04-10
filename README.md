@@ -1,5 +1,7 @@
 ## PROYECTO_FINAL_CODER
 
+Link a video tutorial: https://www.youtube.com/watch?v=ZCvByVAV614
+
 DESCRIPCION
 Este es un proyecto utilizando Python y el framework Django para crear un blog. El proyecto se divide en diferentes aplicaciones las cuales tienen sus tareas especificas. La primera aplicacion seria 'App_Accounts', la cual maneja el registro y logueo de usuarios a la vez que les crea un perfil en la pagina, el cual pueden eliminar y editar a su gusto. Al estar logueados tiene acceso a las dos siguientes aplicaciones, 'App_Messages' y 'App1', que se encargan de permitir a los usuarios enviarse mensajes entre si y de manejar la feed del los blogs subidos por los usuarios respectivamente. Finalmente la aplicacion 'App_About' solo maneja la plantilla donde se muestra la informacion sobre el autor del proyecto.
 
